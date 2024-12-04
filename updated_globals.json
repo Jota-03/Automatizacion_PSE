@@ -1,0 +1,39 @@
+{
+  "_": {
+    "postman_variable_scope": "globals",
+    "postman_exported_at": "2024-12-04T17:04:41.151Z",
+    "postman_exported_using": "Postman/11.21.0"
+  },
+  "id": "d3f464c5-0f4a-4a75-83ce-5c146e81150d",
+  "name": "Globals",
+  "values": [
+    {
+      "type": "any",
+      "value": "AAIgMGRjNGI2YmVmODJkYzQxZTk0ZjgyMTMwZGZiMjZjYWaLN94X7V9jTGz40fgQYewvsXgW0DOmFC_qtvjlkwJQjwQt7AsAZyLdqTO-gmvtBDtx1tLob39nakT21U2vyIEMVn1u4WnBpfhZHGTXH-IDmQlIeguJ-y9o_bpmecCmS5dDt958ioVq2NPImhB9fEBj",
+      "key": "access_token_product"
+    },
+    {
+      "type": "any",
+      "value": "",
+      "key": "access_token_cycle"
+    },
+    {
+      "type": "any",
+      "value": "",
+      "key": "access_token_consulta_trx"
+    },
+    {
+      "type": "any",
+      "value": "https://apiptx-prb.achcolombia.com.co/ach-int/pib",
+      "key": "dominioCapa"
+    },
+    {
+      "type": "any",
+      "value": "https://gw-int.apps.awsprbcluo.awsocpprb.ach.interno.com.co/ach-int/pib",
+      "key": "urlAPI"
+    }
+  ],
+  "_postman_variable_scope": "globals",
+  "_postman_exported_at": "2024-12-04T17:36:57.505Z",
+  "_postman_exported_using": "Newman/6.1.2"
+}

@@ -1,0 +1,33 @@
+{
+	"id": "b7e8a14f-4117-4849-a82f-b5b26e08d9fb",
+	"name": "New Environment",
+	"values": [
+		{
+			"key": "id",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "id_cycle",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "fecha_actual",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "id_vars",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2024-12-04T16:39:19.302Z",
+	"_postman_exported_using": "Postman/11.21.0"
+}
