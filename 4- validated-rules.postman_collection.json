@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "b2103e25-dc1e-4bc7-937b-3037f208b142",
+		"name": "4- validated-rules",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34404218"
+	},
+	"item": [
+		{
+			"name": "validateRules",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_validate}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "fdabefdbe80d66c4a097b97b664066d2",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "edba6cd8f0561b5d9d28b2b430611bf2",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"productId\": {{id}}, // id producto\n  \"entityCode\": 1244,\n  \"financialInstitutionCode\": \"{{cus}}\",// cus\n  \"serviceCode\": 124,\n  \"transactionValue\": 100.50,\n  \"vatValue\": 19.05,\n  \"ticketId\": 987654321,\n  \"entityUrl\": \"http://example.com\",\n  \"userType\": \"PERSON\",\n  \"referenceNumber1\": \"ref123\",\n  \"referenceNumber2\": \"ref456\",\n  \"referenceNumber3\": \"ref789\",\n  \"soliciteDate\": \"2024-12-10T12:00:00Z\",\n  \"paymentDescription\": \"Payment for services\",\n  \"identificationType\": \"CC\",\n  \"identificationNumber\": \"ABC123456\",\n  \"fullName\": \"John Doe\",\n  \"cellphoneNumber\": 123456789,\n  \"address\": \"123 Main St\",\n  \"email\": \"john.doe@example.com\",\n  \"beneficiaryEntityIdentificationType\": \"CC\",\n  \"beneficiaryEntityIdentification\": \"987654321\",\n  \"beneficiaryEntityName\": \"Beneficiary Corp\",\n  \"beneficiaryEntityCIIUCategory\": \"C1234\",\n  \"beneficiaryIdentificationType\": \"NIT\",\n  \"beneficiaryIdentification\": \"NID98765432199\",\n  \"indicator4per1000\": 1,\n  \"entityType\": \"PRIVADA\",\n  \"entityCodeTr\": \"1244\",\n  \"entityNit\": \"11111111\",\n  \"entityEANCode\": \"123456789\",\n  \"modalityPayments\": \"NORMAL\",\n  \"typeVinculation\": \"PSE_DESARROLLO_PROPIO\",\n  \"entityName\": \"Entity Name\",\n  \"economicActivity\": \"retail\",\n  \"codeEconomicActivity\": \"E1234\",\n  \"clientRegistry\": true,\n  \"parameterPOST\": false,\n  \"entityDirection\": \"North\",\n  \"entityCountry\": \"Country\",\n  \"entityCity\": \"City\",\n  \"transactionCalendar\": \"2023-07-26T12:00:00Z\",\n  \"transactionRestrictionCalendar\": \"2023-07-27T12:00:00Z\",\n  \"transactionCredit\": true,\n  \"entityPerformanceMonitoring\": false,\n  \"entityEnabled\": false,\n  \"consumerBankList\": true,\n  \"entityNF\": false,\n  \"directColection\": true,\n  \"entityGateway\": false,\n  \"entityUseGateway\": true,\n  \"associatedGateway\": \"gateway123\",\n  \"entitySocialSecurity\": false,\n  \"administratorSocialSecurity\": true,\n  \"directSpins\": false,\n  \"changeTransactionState\": true,\n  \"entitySusceptibleReversal\": false,\n  \"entityListBank\": \"bank123\",\n  \"serviceCodeTr\": \"124\",\n  \"serviceName\": \"Service Name\",\n  \"serviceDescription\": \"Service Description\",\n  \"serviceAprobation\": \"si\",\n  \"serviceState\": \"ACTIVO\",\n  \"serviceSucursal\": \"Main\",\n  \"serviceNIT\": \"NIT987654321\",\n  \"serviceNameAssociate\": \"Associate Name\",\n  \"serviceCategoryCIIU\": \"CIIU1234\",\n  \"serviceMulticredit\": true,\n  \"serviceCodeMulticredit\": \"123\",\n  \"serviceNameMulticredit\": \"Multi Credit Name\",\n  \"serviceDescriptionMulticredit\": \"Multi Credit Description\",\n  \"serviceAprobationMulticredit\": \"SI\",\n  \"serviceStateMulticredit\": \"ACTIVO\",\n  \"serviceTypeIntegration\": \"Integration Type\",\n  \"serviceAssociateGateway\": \"Associated Gateway\",\n  \"serviceLimitCategoryNatural\": \"Category Natural\",\n  \"serviceLimitCategoryJuridic\": \"Category Juridic\",\n  \"serviceTypePayment\": \"RECAUDOS\",\n  \"serviceTypeCollection\": \"RECAUDOS\",\n  \"accountNumber\": \"ACC123456789\",\n  \"accountType\": \"AHORROS\",\n  \"accountFinancialInstitution\": \"Bank Name\",\n  \"accountNIT\": \"NIT654321987\",\n  \"accountAprobation\": \"SI\",\n  \"accountState\": \"ACTIVO\",\n  \"typeCompensation\": \"LINEA_ACH\",\n  \"codeRouteTransit\": 123,\n  \"codeCompensation\": \"CC123\",\n  \"percentageUseLimits\": \" \",\n  \"financialInstitutionEnabled\": true,\n  \"financialInstitutionCollecting\": true,\n  \"financialInstitutionWSFraudPrevention\": false,\n  \"financialInstitutionHold\": \"Hold Info\",\n  \"financialInstitutionWSCredit\": true,\n  \"financialInstitutionWSNF\": false,\n  \"financialInstitutionReport\": true,\n  \"financialInstitutionMonthlyReport\": true,\n  \"credits\": [\n    {\n        \"serviceCode\": \"124\",\n        \"companyIdentification\": \"8888888\",\n        \"transactionValue\" : 100,\n        \"vatValue\": 100,\n        \"extraData\": \"DATA1\"\n    },\n    {\n        \"serviceCode\": \"124\",\n        \"companyIdentification\": \"8888889\",\n        \"transactionValue\" : 101,\n        \"vatValue\": 100,\n        \"extraData\": \"DATA2\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/validated-rules-mgmt/validate-rules",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"validated-rules-mgmt",
+						"validate-rules"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

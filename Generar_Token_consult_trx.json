@@ -1,13 +1,13 @@
 {
 	"info": {
-		"_postman_id": "7152bd41-fdb1-474d-be39-bb383e0c25e3",
-		"name": "Generar Token Producto",
+		"_postman_id": "8abc398f-f3a4-429a-8b48-bee2a02da4f4",
+		"name": "Generar Token consult trx",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "34404218"
 	},
 	"item": [
 		{
-			"name": "Token producto",
+			"name": "Token consulta trx",
 			"event": [
 				{
 					"listen": "test",
@@ -17,7 +17,7 @@
 							"var jsonData = pm.response.json();\r",
 							" \r",
 							"// Guarda el access_token en una variable global\r",
-							"pm.globals.set(\"access_token_product\", jsonData.access_token);"
+							"pm.globals.set(\"access_token_consulta_trx\", jsonData.access_token);"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -79,13 +79,13 @@
 						{
 							"key": "scope",
 							"value": "product-managment",
-							"type": "text"
+							"type": "text",
+							"disabled": true
 						},
 						{
 							"key": "scope",
 							"value": "transaction-query",
-							"type": "text",
-							"disabled": true
+							"type": "text"
 						},
 						{
 							"key": "scope",

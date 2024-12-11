@@ -1,0 +1,528 @@
+{
+	"info": {
+		"_postman_id": "8f9ddb18-46a3-4695-a6b6-63cf2cf0b50c",
+		"name": "6- consult-trx",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34404218"
+	},
+	"item": [
+		{
+			"name": "Get Transaccion x Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_consulta_trx}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/consult-trx-mgmt/search-trx-find-by/571?productId=1433",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"consult-trx-mgmt",
+						"search-trx-find-by",
+						"571"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "1433"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTransactionByfilters",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_consulta_trx}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/consult-trx-mgmt/search-trx?pageSize=10&pageNumber=1&productId={{id}}",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"consult-trx-mgmt",
+						"search-trx"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "instructionIdentification",
+							"value": "01202406201234567894",
+							"disabled": true
+						},
+						{
+							"key": "creationDatetimeFrom",
+							"value": "2024-06-26",
+							"disabled": true
+						},
+						{
+							"key": "merchantCustomerName",
+							"value": "John",
+							"disabled": true
+						},
+						{
+							"key": "cicle",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "cicle",
+							"value": "1/v1/po/consult-trx-mgmt/search-trx?pageSize=10",
+							"disabled": true
+						},
+						{
+							"key": "productId",
+							"value": "{{id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-transaction-information-HU10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_consulta_trx}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": {{id}},\r\n    \"trazabilityCode\": \"{{cus}}\",\r\n    \"entityCode\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/consult-trx-mgmt/get-trx-info",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"consult-trx-mgmt",
+						"get-trx-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-cycle-state",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Generar la fecha y hora actuales en formato ISO 8601",
+							"const currentDateTime = new Date().toISOString();",
+							"",
+							"// Asignar la fecha y hora actuales a la variable de entorno",
+							"pm.environment.set(\"creationDatetime\", currentDateTime);",
+							"",
+							"// Generar un valor aleatorio para instructionIdentification",
+							"function generateRandomInstructionId() {",
+							"    const prefix = \"0120240822\";",
+							"    const randomDigits = Array.from({length: 12}, () => Math.floor(Math.random() * 10)).join('');",
+							"    return prefix + randomDigits;",
+							"}",
+							"",
+							"// Asignar el valor aleatorio a la variable de entorno",
+							"pm.environment.set(\"instructionIdentification\", generateRandomInstructionId());",
+							"",
+							"// Generar un estado aleatorio",
+							"const statuses = [\"PENDING\", \"APPROVED\", \"REJECTED\", \"FAILED\"];",
+							"const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];",
+							"",
+							"// Asignar el estado aleatorio a la variable de entorno",
+							"pm.environment.set(\"status\", randomStatus);",
+							"",
+							"// Generar un monto aleatorio",
+							"const amounts = [100.00, 200.00, 300.00, 400.00, 500.00];",
+							"const randomAmount = amounts[Math.floor(Math.random() * amounts.length)];",
+							"",
+							"// Asignar el monto aleatorio a la variable de entorno",
+							"pm.environment.set(\"amount\", randomAmount);",
+							"",
+							"// Generar un conjunto de valores únicos para identificationNumber",
+							"const identificationNumbers = [\"1234567890\", \"0987654321\", \"1122334455\", \"5566778899\", \"6677889900\", \"7788990011\", \"8899001122\", \"9900112233\", \"0011223344\", \"2233445566\"];",
+							"const randomIdentificationNumber = identificationNumbers[Math.floor(Math.random() * identificationNumbers.length)];",
+							"",
+							"// Asignar el identificationNumber aleatorio a la variable de entorno",
+							"pm.environment.set(\"identificationNumber\", randomIdentificationNumber);",
+							"",
+							"// Generar un conjunto de pares de valores para financial_institution, account y accountType",
+							"const financialInstitutionAccounts = [",
+							"    { institution: \"1013\", account: \"111111111\", accountType: \"32\" },",
+							"    { institution: \"1032\", account: \"222222222\", accountType: \"22\" },",
+							"    { institution: \"1009\", account: \"333333333\", accountType: \"32\" },",
+							"    { institution: \"1066\", account: \"444444444\", accountType: \"22\" },",
+							"    { institution: \"1051\", account: \"555555555\", accountType: \"32\" },",
+							"    { institution: \"1001\", account: \"666666666\", accountType: \"22\" },",
+							"    { institution: \"1023\", account: \"777777777\", accountType: \"32\" },",
+							"    { institution: \"1062\", account: \"888888888\", accountType: \"22\" },",
+							"    { institution: \"1063\", account: \"999999999\", accountType: \"32\" },",
+							"    { institution: \"1012\", account: \"000000000\", accountType: \"22\" }",
+							"];",
+							"const randomPair = financialInstitutionAccounts[Math.floor(Math.random() * financialInstitutionAccounts.length)];",
+							"",
+							"// Asignar el financial_institution, account y accountType aleatorios a las variables de entorno",
+							"pm.environment.set(\"financialInstitution\", randomPair.institution);",
+							"pm.environment.set(\"account\", randomPair.account);",
+							"pm.environment.set(\"accountType\", randomPair.accountType);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_consulta_trx}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/consult-trx-mgmt/get-cycle-state/1?id=1&cycleDate=2024-08-22",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"consult-trx-mgmt",
+						"get-cycle-state",
+						"1"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "cycleDate",
+							"value": "2024-08-22"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "schema-search-trx",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_consulta_trx}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/consult-trx-mgmt/schema-search-trx?pageSize=100&pageNumber=1&cicle=1&creationDatetime=2024-09-09",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"consult-trx-mgmt",
+						"schema-search-trx"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "100"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "cicle",
+							"value": "1"
+						},
+						{
+							"key": "creationDatetime",
+							"value": "2024-09-09"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:8000/v1/po/consult-trx-mgmt/schema-search-trx?pageSize=100&pageNumber=1&cicle=1&creationDatetime=2024-06-26' \\\n--header 'request-app-id: c4e6bd04-5149-11e7-b114-a2f933d5fe67' \\\n--header 'message-uuid: c4e6bd04-5149-11e7-b114-a2f933d5fe67'"
+			},
+			"response": []
+		}
+	]
+}

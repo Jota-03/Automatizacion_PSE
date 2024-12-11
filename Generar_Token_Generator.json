@@ -1,13 +1,13 @@
 {
 	"info": {
-		"_postman_id": "7152bd41-fdb1-474d-be39-bb383e0c25e3",
-		"name": "Generar Token Producto",
+		"_postman_id": "d75ec98b-c480-4a06-b165-648feadd31b0",
+		"name": "Generar Token Generator",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "34404218"
 	},
 	"item": [
 		{
-			"name": "Token producto",
+			"name": "Token generator",
 			"event": [
 				{
 					"listen": "test",
@@ -17,7 +17,7 @@
 							"var jsonData = pm.response.json();\r",
 							" \r",
 							"// Guarda el access_token en una variable global\r",
-							"pm.globals.set(\"access_token_product\", jsonData.access_token);"
+							"pm.globals.set(\"access_token_generator\", jsonData.access_token);"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -66,9 +66,8 @@
 						},
 						{
 							"key": "scope",
-							"value": "generate-id.create",
-							"type": "text",
-							"disabled": true
+							"value": "generate-id",
+							"type": "text"
 						},
 						{
 							"key": "scope",
@@ -79,7 +78,8 @@
 						{
 							"key": "scope",
 							"value": "product-managment",
-							"type": "text"
+							"type": "text",
+							"disabled": true
 						},
 						{
 							"key": "scope",

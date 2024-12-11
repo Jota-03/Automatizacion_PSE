@@ -1,15 +1,15 @@
 {
   "_": {
     "postman_variable_scope": "globals",
-    "postman_exported_at": "2024-12-04T17:04:41.151Z",
-    "postman_exported_using": "Postman/11.21.0"
+    "postman_exported_at": "2024-12-11T19:37:02.270Z",
+    "postman_exported_using": "Postman/11.22.1"
   },
-  "id": "d3f464c5-0f4a-4a75-83ce-5c146e81150d",
+  "id": "dfdd45ac-4d3f-40b4-8613-f9bc10dfc8cd",
   "name": "Globals",
   "values": [
     {
       "type": "any",
-      "value": "AAIgMGRjNGI2YmVmODJkYzQxZTk0ZjgyMTMwZGZiMjZjYWaLN94X7V9jTGz40fgQYewvsXgW0DOmFC_qtvjlkwJQjwQt7AsAZyLdqTO-gmvtBDtx1tLob39nakT21U2vyIEMVn1u4WnBpfhZHGTXH-IDmQlIeguJ-y9o_bpmecCmS5dDt958ioVq2NPImhB9fEBj",
+      "value": "AAIgMGRjNGI2YmVmODJkYzQxZTk0ZjgyMTMwZGZiMjZjYWb_tPpaympJwlnHedwT-mNFmyZFNz4kCvO3qI3r220fZR1JfjChvNnw5y2ZJqJ1Adn5hqnxFF4YR06j4dFcI0dglb-FWokF_3Xj-y9jK-GLJEt-9C8YEi4cxI1P4gFZfdhQA5GPBemcjv2N3TVfC7Ob",
       "key": "access_token_product"
     },
     {
@@ -24,6 +24,21 @@
     },
     {
       "type": "any",
+      "value": "",
+      "key": "access_token_generator"
+    },
+    {
+      "type": "any",
+      "value": "",
+      "key": "access_token_generateTX"
+    },
+    {
+      "type": "any",
+      "value": "",
+      "key": "access_token_validate"
+    },
+    {
+      "type": "any",
       "value": "https://apiptx-prb.achcolombia.com.co/ach-int/pib",
       "key": "dominioCapa"
     },
@@ -31,9 +46,14 @@
       "type": "any",
       "value": "https://gw-int.apps.awsprbcluo.awsocpprb.ach.interno.com.co/ach-int/pib",
       "key": "urlAPI"
+    },
+    {
+      "type": "any",
+      "value": "https://internal-AWS-PRB-ALB-PTX-GENCUS1-1608557278.us-east-1.elb.amazonaws.com:8443",
+      "key": "UrlFrame"
     }
   ],
   "_postman_variable_scope": "globals",
-  "_postman_exported_at": "2024-12-04T17:36:57.505Z",
+  "_postman_exported_at": "2024-12-11T20:07:20.316Z",
   "_postman_exported_using": "Newman/6.1.2"
 }

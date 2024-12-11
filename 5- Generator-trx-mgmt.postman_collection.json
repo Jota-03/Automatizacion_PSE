@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "782d4eee-61b0-4a3f-93fc-1dabad064e00",
+		"name": "5- Generator-trx-mgmt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34404218"
+	},
+	"item": [
+		{
+			"name": "createTransaction",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Captura el initiationId de la respuesta JSON\r",
+							"var jsonResponse = pm.response.json();\r",
+							"var initiationId = jsonResponse.data.initiation.initiationId;\r",
+							"\r",
+							"// Guarda el initiationId en una variable de entorno\r",
+							"pm.environment.set(\"initiationId\", initiationId);\r",
+							"\r",
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Función para generar un string alfanumérico de longitud específica\r",
+							"function generateRandomAlphanumeric(length) {\r",
+							"    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';\r",
+							"    var result = '';\r",
+							"    for (var i = 0; i < length; i++) {\r",
+							"        result += characters.charAt(Math.floor(Math.random() * characters.length));\r",
+							"    }\r",
+							"    return result;\r",
+							"}\r",
+							"\r",
+							"var moment = require('moment');  // Requiere la librería moment\r",
+							"var currentDate = moment().format('YYYY-MM-DDTHH:mm:ss');  // Obtiene la fecha actual en el formato necesario\r",
+							"pm.environment.set(\"currentDate\", currentDate);  // Establece la variable de entorno\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_generateTX}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"initiation\": {\n    \"productId\": {{id}},\n    \"initiationType\": \"PR\",\n    \"instructionIdentification\": \"{{cus}}\",//llama cus de generatorgetnextid capturar\n    \"endtoendIdentification\": \"{{endtoendIdentification}}\",//no puede repetirse\n    \"creationDatetime\": \"{{currentDate}}\",\n    \"status\": \"PENDING\",\n    \"authorizationCode\": \"ENTITY_NOT_EXISTS\",\n    \"validationPayeer\": \"Y\",\n    \"geolocalization\": \"41.40338, 2.17403\",\n    \"channel\": \"ONLINE\",\n    \"mandateId\": \"MANDATE123\",\n    \"cicle\": \"DAILY\"\n  },\n  \"instructedAmount\": {\n    \"amount\": 100.00,\n    \"currency\": \"USD\",\n    \"chargesAmount\": 5.00,\n    \"gmftaxIndicator\": \"N\"\n  },\n  \"remittanceInformation\": {\n    \"identificationType\": \"CC\",\n    \"identificationNumber\": \"1234567890\",\n    \"merchantCustomerName\": \"John Doe\",\n    \"merchantCustomerCategoryCode\": \"B2C\",\n    \"serviceCode\": \"SV123\",\n    \"reference2\": \"REF2-123\",\n    \"reference3\": \"REF3-123\",\n    \"unstructured\": \"UNSTR123\",\n    \"reference1\": \"REF1-123\",\n    \"method\": \"METHOD123\"\n  },\n  \"beneficiaryAgent\": {\n    \"financial_institution\": \"Banco A\",\n    \"account\": \"123456789\",\n    \"accountType\": \"CHECKING\"\n  },\n  \"debtorAgent\": {\n    \"financialInstitution\": \"Banco B\",\n    \"account\": \"987654321\",\n    \"accountType\": \"SAVINGS\"\n  },\n  \"initiatingParty\": {\n    \"identificationType\": \"CC\",\n    \"identificationNumber\": \"1122334455\",\n    \"name\": \"Jane Smith\",\n    \"ciiu\": \"CI123\",\n    \"serviceCode\": \"SV456\",\n    \"instructionIdentification\": \"INST12345\"\n  },\n  \"debtor\": {\n    \"userType\": \"PN\",\n    \"identificationType\": \"CC\",\n    \"identificationNumber\": \"5566778899\",\n    \"name\": \"Doe Corp\",\n    \"phoneNumber\": \"555-1234\",\n    \"email\": \"doe@corp.com\",\n    \"address\": \"123 Main St\"\n  },\n  \"thirdParty\": {\n    \"userType\": \"PJ\",\n    \"identificationType\": \"CE\",\n    \"identificationNumber\": \"9988776655\",\n    \"name\": \"Third Party Ltd\",\n    \"phoneNumber\": \"555-5678\",\n    \"email\": \"third@party.com\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/generator-trx-mgmt/transactions",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"generator-trx-mgmt",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTransaction",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_generateTX}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"productId\": {{id}},\n  \"instructionIdentification\": \"{{cus}}\",//se llama del anterior y el estado debe ser pending\n  \"status\": \"PENDING\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/generator-trx-mgmt/update-trx-status",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"generator-trx-mgmt",
+						"update-trx-status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
