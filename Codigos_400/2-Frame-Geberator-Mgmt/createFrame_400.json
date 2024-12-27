@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "7a98c1e2-38ff-47f2-b263-c0bec81299b5",
+		"name": "2-createFrame_400",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34404218"
+	},
+	"item": [
+		{
+			"name": "createFrame Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\": {{productId}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{UrlFrame}}/v1/po/frame-generator-mgmt/create-frame",
+					"host": [
+						"{{UrlFrame}}"
+					],
+					"path": [
+						"v1",
+						"po",
+						"frame-generator-mgmt",
+						"create-frame"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
