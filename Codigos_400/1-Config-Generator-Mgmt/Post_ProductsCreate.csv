@@ -1,0 +1,11 @@
+﻿productName,productTag,productUuid,sequenceTotal,description,comentario
+"""""","""TRA""","""{{$guid}}""",1,"""Creacion producto Prueba Capa 012""",productName - enviar campo vacio
+"""lj""","""TRA""","""{{$guid}}""",1,"""Creacion producto Prueba Capa 012""",productName minimo de caracteres (caracteres)
+"""{{$randomBankAccountName}}""","""""","""{{$guid}}""",1,"""Creacion producto Prueba Capa 012""",productTag - enviar campo vacio
+"""{{$randomBankAccountName}}""",null,"""{{$guid}}""",1,"""Creacion producto Prueba Capa 012""",productTag - enviar campo nulo
+"""{{$randomBankAccountName}}""","""TRA""","""""",1,"""Creacion producto Prueba Capa 012""",productUuid - enviar campo vacio
+"""{{$randomBankAccountName}}""","""TRA""",null,1,"""Creacion producto Prueba Capa 012""",productUuid - enviar campo nulo
+"""{{$randomBankAccountName}}""","""TRA""","""{{$guid}}""",,"""Creacion producto Prueba Capa 012""",sequenceTotal - enviar campo vacio
+"""{{$randomBankAccountName}}""","""TRA""","""{{$guid}}""",null,"""Creacion producto Prueba Capa 012""",sequenceTotal - enviar campo nulo
+"""{{$randomBankAccountName}}""","""TRA""","""{{$guid}}""",1,"""""",description - enviar campo vacio
+"""{{$randomBankAccountName}}""","""TRA""","""{{$guid}}""",1,null,description - enviar campo nulo

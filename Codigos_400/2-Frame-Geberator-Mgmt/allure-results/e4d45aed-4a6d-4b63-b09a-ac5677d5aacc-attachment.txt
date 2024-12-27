@@ -1,0 +1,8 @@
+{
+    "productName": "Checking Account",
+    "productTag": "TAG1",
+    "sequenceName": "Sec PSE 3.0",
+    "sequenceTotal": 1000,
+    "sequenceMin": 1,
+    "description": "Descripcion de caso de prueba 2"
+}

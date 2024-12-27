@@ -1,0 +1,12 @@
+{
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer AAIgNmQ1ZDJkYWE4NTgxZTlhMjRkNjdkM2I5NjMzZTE3YTSxvhV8hls6uQBfNmixaxdS2FocWMWFFTowIaF7L_TEd4YhNYf52MfVNu5Mp-4npaJg56LsOazzsKH4z-QwpSK1igsGBhy5EmckmQjS9r0Ux18hQ1YCeGMV7U1ECPr_erP_S7yOo28AvUm6phl112kz",
+    "User-Agent": "PostmanRuntime/7.37.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "69ea25d7-c714-48a5-a75f-0360f1917996",
+    "Host": "gw-int.apps.awsprbcluo.awsocpprb.ach.interno.com.co",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "143"
+}

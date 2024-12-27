@@ -1,0 +1,7 @@
+{
+    "productName": "Checking Account",
+    "productTag": "TRA",
+    "productUuid": "76b35879-4abb-4c40-98f1-0ea5b103c3e7",
+    "sequenceTotal": 1,
+    "description": "Creacion producto Prueba Capa 012"
+}

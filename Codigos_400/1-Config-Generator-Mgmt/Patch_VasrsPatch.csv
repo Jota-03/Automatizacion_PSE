@@ -1,0 +1,11 @@
+﻿varName,value,frameOrder,description,status,comentario
+"""""","""01""",1,"""Up_Variable del producto""","""ACTIVE""",varName - enviar campo vacio
+"""lj""","""01""",1,"""Up_Variable del producto""","""ACTIVE""",varName minimo de caracteres (caracteres)
+"""Nombre del producto""","""""",1,"""Up_Variable del producto""","""ACTIVE""",vale - enviar campo vacio
+"""Nombre del producto""",null,1,"""Up_Variable del producto""","""ACTIVE""",value - enviar campo nulo
+"""Nombre del producto""","""01""",,"""Up_Variable del producto""","""ACTIVE""",frameOrder - enviar campo vacio
+"""Nombre del producto""","""01""",null,"""Up_Variable del producto""","""ACTIVE""",frameOrder - enviar campo nulo
+"""Nombre del producto""","""01""",1,"""""","""ACTIVE""",description - enviar campo vacio
+"""Nombre del producto""","""01""",1,null,"""ACTIVE""",description - enviar campo nulo
+"""Nombre del producto""","""01""",1,"""Up_Variable del producto""","""""",status - enviar campo vacio
+"""Nombre del producto""","""01""",1,"""Up_Variable del producto""",null,status - enviar campo nulo

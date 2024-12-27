@@ -1,0 +1,11 @@
+﻿productName,productTag,sequenceName,sequenceTotal,description,comentario
+"""""","""TRA""","""Sec PSE 3.0""",1000,"""Descripcion de caso de prueba 2""",productName - enviar campo vacio
+"""lj""","""TRA""","""Sec PSE 3.0""",1000,"""Descripcion de caso de prueba 2""",productName minimo de caracteres (caracteres)
+"""{{$randomBankAccountName}}""","""""","""Sec PSE 3.0""",1000,"""Descripcion de caso de prueba 2""",productTag - enviar campo vacio
+"""{{$randomBankAccountName}}""",null,"""Sec PSE 3.0""",1000,"""Descripcion de caso de prueba 2""",productTag - enviar campo nulo
+"""{{$randomBankAccountName}}""","""TRA""","""""",1000,"""Descripcion de caso de prueba 2""",sequenceName - enviar campo vacio
+"""{{$randomBankAccountName}}""","""TRA""",null,1000,"""Descripcion de caso de prueba 2""",sequenceName - enviar campo nulo
+"""{{$randomBankAccountName}}""","""TRA""","""Sec PSE 3.0""",,"""Descripcion de caso de prueba 2""",sequenceTotal - enviar campo vacio
+"""{{$randomBankAccountName}}""","""TRA""","""Sec PSE 3.0""",null,"""Descripcion de caso de prueba 2""",sequenceTotal - enviar campo nulo
+"""{{$randomBankAccountName}}""","""TRA""","""Sec PSE 3.0""",1000,"""""",description - enviar campo vacio
+"""{{$randomBankAccountName}}""","""TRA""","""Sec PSE 3.0""",1000,null,description - enviar campo nulo

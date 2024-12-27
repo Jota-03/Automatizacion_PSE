@@ -1,0 +1,7 @@
+﻿startDate;endDate;typeException;comentario
+"""""";"""2024-10-22T00:00:00""";"""AUTOMATIC""";startDate - enviar campo vacio
+null;"""2024-10-22T00:00:00""";"""AUTOMATIC""";startDate - enviar campo nulo
+"""2024-10-22T00:00:00""";"""""";"""AUTOMATIC""";endDate - enviar campo vacio
+"""2024-10-22T00:00:00""";null;"""AUTOMATIC""";endDate - enviar campo nulo
+"""2024-10-22T00:00:00""";"""2024-10-22T00:00:00""";"""""";typeException - enviar campo vacio
+"""2024-10-22T00:00:00""";"""2024-10-22T00:00:00""";null;typeException - enviar campo nulo

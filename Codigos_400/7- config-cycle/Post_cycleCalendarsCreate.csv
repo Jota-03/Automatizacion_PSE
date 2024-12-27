@@ -1,0 +1,14 @@
+﻿typeCycle;numberCycle;startDate;endDate;startTime;endTime;comentario
+"""""";{{randomNumber}};"""2024-10-29T08:00:00""";"""2024-10-29T17:00:00""";"""08:00:00""";"""10:00:00""";typeCycle - enviar campo vacio
+null;{{randomNumber}};"""2024-10-29T08:00:00""";"""2024-10-29T17:00:00""";"""08:00:00""";"""10:00:00""";typeCycle - enviar campo nulo
+"""AUTOMATIC""";;"""2024-10-29T08:00:00""";"""2024-10-29T17:00:00""";"""08:00:00""";"""10:00:00""";numberCycle - enviar campo vacio
+"""AUTOMATIC""";null;"""2024-10-29T08:00:00""";"""2024-10-29T17:00:00""";"""08:00:00""";"""10:00:00""";numberCycle - enviar campo nulo
+"""AUTOMATIC""";{{randomNumber}};"""""";"""2024-10-29T17:00:00""";"""08:00:00""";"""10:00:00""";startDate - enviar campo vacio
+"""AUTOMATIC""";{{randomNumber}};null;"""2024-10-29T17:00:00""";"""08:00:00""";"""10:00:00""";startDate - enviar campo nulo
+"""AUTOMATIC""";{{randomNumber}};"""2024-10-29T08:00:00""";"""""";"""08:00:00""";"""10:00:00""";endDate - enviar campo vacio
+"""AUTOMATIC""";{{randomNumber}};"""2024-10-29T08:00:00""";null;"""08:00:00""";"""10:00:00""";endDate - enviar campo nulo
+"""AUTOMATIC""";{{randomNumber}};"""2024-10-29T08:00:00""";"""2024-10-29T17:00:00""";"""""";"""10:00:00""";startTime - enviar campo vacio
+"""AUTOMATIC""";{{randomNumber}};"""2024-10-29T08:00:00""";"""2024-10-29T17:00:00""";null;"""10:00:00""";startTime - enviar campo nulo
+"""AUTOMATIC""";{{randomNumber}};"""2024-10-29T08:00:00""";"""2024-10-29T17:00:00""";"""08:00:00""";"""""";endTime - enviar campo vacio
+"""AUTOMATIC""";{{randomNumber}};"""2024-10-29T08:00:00""";"""2024-10-29T17:00:00""";"""08:00:00""";null;endTime - enviar campo nulo
+;;;;;;

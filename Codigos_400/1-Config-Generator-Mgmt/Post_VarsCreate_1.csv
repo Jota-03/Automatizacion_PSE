@@ -1,0 +1,11 @@
+﻿varName,value,frameOrder,description,status,comentario
+"""""","""01""",1,"""Creación variables ProductId_826""","""ACTIVE""",varName - enviar campo vacio
+"""lj""","""01""",1,"""Creación variables ProductId_826""","""ACTIVE""",varName minimo de caracteres (caracteres)
+"""Nombre del producto""","""""",1,"""Creación variables ProductId_826""","""ACTIVE""",value - enviar campo vacio
+"""Nombre del producto""",null,1,"""Creación variables ProductId_826""","""ACTIVE""",value - enviar campo nulo
+"""Nombre del producto""","""01""",,"""Creación variables ProductId_826""","""ACTIVE""",frameOrder - enviar campo vacio
+"""Nombre del producto""","""01""",null,"""Creación variables ProductId_826""","""ACTIVE""",frameOrder - enviar campo nulo
+"""Nombre del producto""","""01""",1,"""""","""ACTIVE""",description - enviar campo vacio
+"""Nombre del producto""","""01""",1,null,"""ACTIVE""",description - enviar campo nulo
+"""Nombre del producto""","""01""",1,"""Creación variables ProductId_826""","""""",status - enviar campo vacio
+"""Nombre del producto""","""01""",1,"""Creación variables ProductId_826""",null,status - enviar campo nulo

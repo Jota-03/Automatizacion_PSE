@@ -1,0 +1,1 @@
+{"token_type":"Bearer","access_token":"AAIgMGRjNGI2YmVmODJkYzQxZTk0ZjgyMTMwZGZiMjZjYWaLN94X7V9jTGz40fgQYewvsXgW0DOmFC_qtvjlkwJQjwQt7AsAZyLdqTO-gmvtBDtx1tLob39nakT21U2vyIEMVn1u4WnBpfhZHGTXH-IDmQlIeguJ-y9o_bpmecCmS5dDt958ioVq2NPImhB9fEBj","scope":"product-managment","expires_in":3600,"consented_on":1733333817}

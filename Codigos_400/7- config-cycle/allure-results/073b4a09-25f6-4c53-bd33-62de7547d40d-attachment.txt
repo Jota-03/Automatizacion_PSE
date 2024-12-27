@@ -1,0 +1,7 @@
+{
+    "varName": "Producto826",
+    "value": "01",
+    "frameOrder": 1,
+    "description": "Creación variables ProductId_826",
+    "status": "ACTIVE"
+}

@@ -1,0 +1,14 @@
+// Asegúrate de que la respuesta está en el formato JSON
+let responseData = pm.response.json();
+ 
+// Extrae el valor de "id" del objeto "data"
+let idValue = responseData.data.id;
+ 
+ 
+// Guarda el valor de "id" en una variable de entorno o de colección
+pm.environment.set("id", idValue);
+
+//validar respuesta correcta
+pm.test("Status code is 201", function () {
+    pm.response.to.have.status(201);
+})

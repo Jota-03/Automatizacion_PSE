@@ -1,0 +1,7 @@
+{
+    "varName": "Producto 496",
+    "value": "PRUEBA1",
+    "frameOrder": 1,
+    "description": "Up_Variable del producto",
+    "status": "ACTIVE"
+}

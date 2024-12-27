@@ -1,0 +1,16 @@
+{
+    "message-uuid": "585762f0-58ed-4ad4-b9e8-9994ea533476",
+    "request-app-id": "28751034-06f0-4d95-ac1e-31412ef01425",
+    "Client-Id": "0dc4b6bef82dc41e94f82130dfb26caf",
+    "Client-Secret": "7421f336a9c01538bee4725d13fefb47",
+    "Cache-Control": "no-cache",
+    "Content-Type": "application/json",
+    "Authorization": "Bearer AAIgMGRjNGI2YmVmODJkYzQxZTk0ZjgyMTMwZGZiMjZjYWaLN94X7V9jTGz40fgQYewvsXgW0DOmFC_qtvjlkwJQjwQt7AsAZyLdqTO-gmvtBDtx1tLob39nakT21U2vyIEMVn1u4WnBpfhZHGTXH-IDmQlIeguJ-y9o_bpmecCmS5dDt958ioVq2NPImhB9fEBj",
+    "User-Agent": "PostmanRuntime/7.37.1",
+    "Accept": "*/*",
+    "Postman-Token": "3dc6f449-b235-40d3-9cb4-ed501c8f1ec2",
+    "Host": "apiptx-prb.achcolombia.com.co",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "205"
+}

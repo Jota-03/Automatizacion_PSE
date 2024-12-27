@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "3c752b9a-e1b6-406a-8d4f-28465fdd42a3",
+		"name": "1-VarsCreate2_400",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34404218"
+	},
+	"item": [
+		{
+			"name": "VarsCreate_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_product}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"varName\": {{varName}},\n    \"value\": {{value}},\n    \"frameOrder\": {{frameOrder}},\n    \"description\": {{description}},\n    \"status\": {{status}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/products/{{id}}/vars",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"products",
+						"{{id}}",
+						"vars"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

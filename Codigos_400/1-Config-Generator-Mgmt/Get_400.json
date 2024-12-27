@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "9e9474df-82e1-4eca-b704-85f8c77db89f",
+		"name": "1-Get_400",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34404218"
+	},
+	"item": [
+		{
+			"name": "ProductsFindByProducId Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_product}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/products/{{id}}",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"products",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductsFindAll",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_product}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/products?pageNumber=1",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"products"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VarsFindById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_product}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/products/{{id}}/vars/{{id_vars}}",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"products",
+						"{{id}}",
+						"vars",
+						"{{id_vars}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VarsFindAll",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_product}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/products/{{id}}/vars?pageSize=1&pageNumber=1",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"products",
+						"{{id}}",
+						"vars"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "1"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

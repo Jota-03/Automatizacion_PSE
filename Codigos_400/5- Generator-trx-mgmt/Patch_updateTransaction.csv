@@ -1,0 +1,9 @@
+﻿productId;instructionIdentification;status;comentario
+;"""{{cus}}""";"""PENDING""";productId - enviar campo vacio
+null;"""{{cus}}""";"""PENDING""";productId - enviar campo nulo
+{{id}};"""""";"""PENDING""";instructionIdentification - enviar campo vacio
+{{id}};null;"""PENDING""";instructionIdentification - enviar campo nulo
+{{id}};"""{{cus}}""";"""""";status - enviar campo vacio
+{{id}};"""{{cus}}""";null;status - enviar campo nulo
+;;;
+;;;

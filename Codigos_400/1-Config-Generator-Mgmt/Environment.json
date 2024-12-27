@@ -1,0 +1,129 @@
+{
+	"id": "1bec07e3-b619-456f-b044-e345ab1b5fd7",
+	"name": "New Environment",
+	"values": [
+		{
+			"key": "id",
+			"value": "1490",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "id_cycle",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "fecha_actual",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "id_vars",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "nit",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "cus",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "creationDatetime",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "instructionIdentification",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "status",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "amount",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "identificationNumber",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "financialInstitution",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "account",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "accountType",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "startDate",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "endDate",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "id_calendar",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "initiationId",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "endtoendIdentification",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "currentDate",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2024-12-27T19:53:48.534Z",
+	"_postman_exported_using": "Postman/11.23.3"
+}
