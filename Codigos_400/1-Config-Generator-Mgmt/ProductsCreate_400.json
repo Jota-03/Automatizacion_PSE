@@ -13,20 +13,14 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"// Asegúrate de que la respuesta está en el formato JSON\r",
-							"let responseData = pm.response.json();\r",
-							" \r",
-							"// Extrae el valor de \"id\" del objeto \"data\"\r",
-							"var id = responseData.data.id;\r",
-							" \r",
-							" \r",
-							"// Guarda el valor de \"id\" en una variable de entorno o de colección\r",
-							"pm.environment.set(\"id\", id);\r",
+							"// Imprimir el comentario en la consola de Newman\r",
+							"console.log(\"Comentario del caso de prueba: \", pm.iterationData.get(\"comentario\"));\r",
 							"\r",
 							"//validar respuesta correcta\r",
 							"pm.test(\"Status code is 400\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
-							"})"
+							"})\r",
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}

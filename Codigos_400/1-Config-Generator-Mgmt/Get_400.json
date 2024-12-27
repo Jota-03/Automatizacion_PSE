@@ -111,7 +111,8 @@
 					{
 						"key": "message-uuid",
 						"value": "{{$randomUUID}}",
-						"type": "text"
+						"type": "text",
+						"disabled": true
 					},
 					{
 						"key": "request-app-id",
