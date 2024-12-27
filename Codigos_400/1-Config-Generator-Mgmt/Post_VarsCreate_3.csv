@@ -3,7 +3,7 @@
 """lj""","""CCCCCCCCCCCC""",3,"""Creación variables ProductId_826""","""ACTIVE""",varName minimo de caracteres (caracteres)
 """SerialNumber""","""""",3,"""Creación variables ProductId_826""","""ACTIVE""",value - enviar campo vacio
 """SerialNumber""",null,3,"""Creación variables ProductId_826""","""ACTIVE""",value - enviar campo nulo
-"""SerialNumber""","""CCCCCCCCCCCC""",,"""Creación variables ProductId_826""","""ACTIVE""",frameOrder - enviar campo vacio
+"""SerialNumber""","""CCCCCCCCCCCC""","""""","""Creación variables ProductId_826""","""ACTIVE""",frameOrder - enviar campo vacio
 """SerialNumber""","""CCCCCCCCCCCC""",null,"""Creación variables ProductId_826""","""ACTIVE""",frameOrder - enviar campo nulo
 """SerialNumber""","""CCCCCCCCCCCC""",3,"""""","""ACTIVE""",description - enviar campo vacio
 """SerialNumber""","""CCCCCCCCCCCC""",3,null,"""ACTIVE""",description - enviar campo nulo

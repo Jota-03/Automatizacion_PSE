@@ -3,7 +3,7 @@
 """lj""","""yyyyMMdd""",2,"""Creación variables ProductId_826""","""ACTIVE""",varName minimo de caracteres (caracteres)
 """ProductDate""","""""",2,"""Creación variables ProductId_826""","""ACTIVE""",value - enviar campo vacio
 """ProductDate""",null,2,"""Creación variables ProductId_826""","""ACTIVE""",value - enviar campo nulo
-"""ProductDate""","""yyyyMMdd""",,"""Creación variables ProductId_826""","""ACTIVE""",frameOrder - enviar campo vacio
+"""ProductDate""","""yyyyMMdd""","""""","""Creación variables ProductId_826""","""ACTIVE""",frameOrder - enviar campo vacio
 """ProductDate""","""yyyyMMdd""",null,"""Creación variables ProductId_826""","""ACTIVE""",frameOrder - enviar campo nulo
 """ProductDate""","""yyyyMMdd""",2,"""""","""ACTIVE""",description - enviar campo vacio
 """ProductDate""","""yyyyMMdd""",2,null,"""ACTIVE""",description - enviar campo nulo

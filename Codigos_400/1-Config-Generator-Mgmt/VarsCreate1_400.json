@@ -16,10 +16,15 @@
 							"// Imprimir el comentario en la consola de Newman\r",
 							"console.log(\"Comentario del caso de prueba: \", pm.iterationData.get(\"comentario\"));\r",
 							"\r",
-							"//validar respuesta correcta\r",
-							"pm.test(\"Status code is 400\", function () {\r",
-							"    pm.response.to.have.status(400);\r",
-							"})"
+							"// captura la variable code es igual a 1013\r",
+							"const responseJson = pm.response.json();\r",
+							"const code = responseJson.errors[0].code;\r",
+							"const codenum = Number(code);\r",
+							"\r",
+							" \r",
+							"pm.test(\"La variable de entorno 'code' es 400\", function () {\r",
+							"  pm.expect(codenum).to.equal(400); // Verifica si la variable es igual a 400\r",
+							"});"
 						],
 						"type": "text/javascript",
 						"packages": {}
