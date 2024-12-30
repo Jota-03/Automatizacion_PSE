@@ -10,7 +10,7 @@
 		},
 		{
 			"key": "id_cycle",
-			"value": "",
+			"value": "517",
 			"type": "default",
 			"enabled": true
 		},
@@ -100,7 +100,7 @@
 		},
 		{
 			"key": "id_calendar",
-			"value": "",
+			"value": "315",
 			"type": "default",
 			"enabled": true
 		},
@@ -130,6 +130,6 @@
 		}
 	],
 	"_postman_variable_scope": "environment",
-	"_postman_exported_at": "2024-12-27T21:38:35.672Z",
+	"_postman_exported_at": "2024-12-30T19:49:02.135Z",
 	"_postman_exported_using": "Postman/11.23.3"
 }

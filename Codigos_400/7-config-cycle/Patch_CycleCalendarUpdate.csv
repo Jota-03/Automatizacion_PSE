@@ -1,9 +1,9 @@
-﻿typeCycle;numberCycle;startDate;endDate;comentario
-"""""";3;"""2024-10-22T08:00:00""";"""2024-10-22T17:00:00""";typeCycle - enviar campo vacio
-null;3;"""2024-10-22T08:00:00""";"""2024-10-22T17:00:00""";typeCycle - enviar campo nulo
-"""AUTOMATIC""";;"""2024-10-22T08:00:00""";"""2024-10-22T17:00:00""";numberCycle - enviar campo vacio
-"""AUTOMATIC""";null;"""2024-10-22T08:00:00""";"""2024-10-22T17:00:00""";numberCycle - enviar campo nulo
-"""AUTOMATIC""";3;"""""";"""2024-10-22T17:00:00""";startDate - enviar campo vacio
-"""AUTOMATIC""";3;null;"""2024-10-22T17:00:00""";startDate - enviar campo nulo
-"""AUTOMATIC""";3;"""2024-10-22T08:00:00""";"""""";endDate - enviar campo vacio
-"""AUTOMATIC""";3;"""2024-10-22T08:00:00""";null;endDate - enviar campo nulo
+﻿typeCycle,numberCycle,startDate,endDate,comentario
+"""""",3,"""2024-10-22T08:00:00""","""2024-10-22T17:00:00""",typeCycle - enviar campo vacio
+null,3,"""2024-10-22T08:00:00""","""2024-10-22T17:00:00""",typeCycle - enviar campo nulo
+"""AUTOMATIC""","""""","""2024-10-22T08:00:00""","""2024-10-22T17:00:00""",numberCycle - enviar campo vacio
+"""AUTOMATIC""",null,"""2024-10-22T08:00:00""","""2024-10-22T17:00:00""",numberCycle - enviar campo nulo
+"""AUTOMATIC""",3,"""""","""2024-10-22T17:00:00""",startDate - enviar campo vacio
+"""AUTOMATIC""",3,null,"""2024-10-22T17:00:00""",startDate - enviar campo nulo
+"""AUTOMATIC""",3,"""2024-10-22T08:00:00""","""""",endDate - enviar campo vacio
+"""AUTOMATIC""",3,"""2024-10-22T08:00:00""",null,endDate - enviar campo nulo

@@ -1,9 +1,9 @@
-﻿startDate;endDate;typeException;description;comentario
-"""""";"""{{endDate}}""";"""MANUAL""";"""NA""";startDate - envari campo vacio
-null;"""{{endDate}}""";"""MANUAL""";"""NA""";startDate - envari campo nulo
-"""{{startDate}}""";"""""";"""MANUAL""";"""NA""";endDate - envari campo vacio
-"""{{startDate}}""";null;"""MANUAL""";"""NA""";endDate - envari campo nulo
-"""{{startDate}}""";"""{{endDate}}""";"""""";"""NA""";typeException - envari campo vacio
-"""{{startDate}}""";"""{{endDate}}""";null;"""NA""";typeException - envari campo nulo
-"""{{startDate}}""";"""{{endDate}}""";"""MANUAL""";"""""";description - envari campo vacio
-"""{{startDate}}""";"""{{endDate}}""";"""MANUAL""";null;description - envari campo nulo
+﻿startDate,endDate,typeException,description,comentario
+"""""","""{{endDate}}""","""MANUAL""","""NA""",startDate - envari campo vacio
+null,"""{{endDate}}""","""MANUAL""","""NA""",startDate - envari campo nulo
+"""{{startDate}}""","""""","""MANUAL""","""NA""",endDate - envari campo vacio
+"""{{startDate}}""",null,"""MANUAL""","""NA""",endDate - envari campo nulo
+"""{{startDate}}""","""{{endDate}}""","""""","""NA""",typeException - envari campo vacio
+"""{{startDate}}""","""{{endDate}}""",null,"""NA""",typeException - envari campo nulo
+"""{{startDate}}""","""{{endDate}}""","""MANUAL""","""""",description - envari campo vacio
+"""{{startDate}}""","""{{endDate}}""","""MANUAL""",null,description - envari campo nulo

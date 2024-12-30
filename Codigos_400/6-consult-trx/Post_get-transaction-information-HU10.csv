@@ -1,7 +1,7 @@
-﻿productId;trazabilityCode;entityCode;comentario
-;"""{{cus}}""";"""1234567890""";productId - enviar campo vacio
-null;"""{{cus}}""";"""1234567890""";productId - enviar campo nulo
-{{id}};"""""";"""1234567890""";trazabilityCode - enviar campo vacio
-{{id}};null;"""1234567890""";trazabilityCode - enviar campo nulo
-{{id}};"""{{cus}}""";"""""";entityCode - enviar campo vacio
-{{id}};"""{{cus}}""";null;entityCode - enviar campo nulo
+﻿productId,trazabilityCode,entityCode,comentario
+"""""","""{{cus}}""","""1234567890""",productId - enviar campo vacio
+null,"""{{cus}}""","""1234567890""",productId - enviar campo nulo
+{{id}},"""""","""1234567890""",trazabilityCode - enviar campo vacio
+{{id}},null,"""1234567890""",trazabilityCode - enviar campo nulo
+{{id}},"""{{cus}}""","""""",entityCode - enviar campo vacio
+{{id}},"""{{cus}}""",null,entityCode - enviar campo nulo

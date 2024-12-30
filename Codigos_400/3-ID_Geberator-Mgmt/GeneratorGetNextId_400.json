@@ -28,6 +28,9 @@
 					"listen": "test",
 					"script": {
 						"exec": [
+							"// Imprimir el comentario en la consola de Newman\r",
+							"console.log(\"Comentario del caso de prueba: \", pm.iterationData.get(\"comentario\"));\r",
+							"\r",
 							"//validar respuesta correcta\r",
 							"pm.test(\"Status code is 400\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
