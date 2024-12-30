@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "a5cdf60c-c970-4875-af26-9cd370ec2988",
+		"name": "4- validated-rules Errores 400",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34404218"
+	},
+	"item": [
+		{
+			"name": "validateRules",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_validate}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\": {{productId}}, // id producto bien\n    \"entityCode\": {{entityCode}},\n    \"financialInstitutionCode\": {{financialInstitutionCode}}, // codigo entitidad financiera\n    \"serviceCode\": {{serviceCode}},\n    \"transactionValue\": {{transactionValue}},\n    \"vatValue\": {{vatValue}},\n    \"ticketId\": {{ticketId}},\n    \"entityUrl\": {{entityUrl}},\n    \"userType\": {{userType}},\n    \"referenceNumber1\": {{referenceNumber1}},\n    \"referenceNumber2\": {{referenceNumber2}},\n    \"referenceNumber3\": {{referenceNumber3}},\n    \"soliciteDate\": {{soliciteDate}},\n    \"paymentDescription\": {{paymentDescription}},\n    \"identificationType\": {{identificationType}},\n    \"identificationNumber\": {{identificationNumber}},\n    \"fullName\": {{fullName}},\n    \"cellphoneNumber\": {{cellphoneNumber}},\n    \"address\": {{address}},\n    \"email\": {{email}},\n    \"beneficiaryEntityIdentificationType\": {{beneficiaryEntityIdentificationType}},\n    \"beneficiaryEntityIdentification\": {{beneficiaryEntityIdentification}},\n    \"beneficiaryEntityName\": {{beneficiaryEntityName}},\n    \"beneficiaryEntityCIIUCategory\": {{beneficiaryEntityCIIUCategory}},\n    \"beneficiaryIdentificationType\": {{beneficiaryIdentificationType}},\n    \"beneficiaryIdentification\": {{beneficiaryIdentification}},\n    \"indicator4per1000\": {{indicator4per1000}},\n    \"entityType\": {{entityType}},\n    \"entityCodeTr\": {{entityCodeTr}},\n    \"entityNit\": {{entityNit}},\n    \"entityEANCode\": {{entityEANCode}},\n    \"modalityPayments\": {{modalityPayments}},\n\"typeVinculation\":{{typeVinculation}},\n\"entityName\":{{entityName}},\n\"economicActivity\":{{economicActivity}},\n\"codeEconomicActivity\":{{codeEconomicActivity}},\n\"clientRegistry\":{{clientRegistry}},\n\"parameterPOST\":{{parameterPOST}},\n\"entityDirection\":{{entityDirection}},\n\"entityCountry\":{{entityCountry}},\n\"entityCity\":{{entityCity}},\n\"transactionCalendar\":{{transactionCalendar}},\n\"transactionRestrictionCalendar\":{{transactionRestrictionCalendar}},\n\"transactionCredit\":{{transactionCredit}},\n\"entityPerformanceMonitoring\":{{entityPerformanceMonitoring}},\n\"entityEnabled\":{{entityEnabled}},\n\"consumerBankList\":{{consumerBankList}},\n\"entityNF\":{{entityNF}},\n\"directColection\":{{directColection}},\n\"entityGateway\":{{entityGateway}},\n\"entityUseGateway\":{{entityUseGateway}},\n\"associatedGateway\":{{associatedGateway}},\n\"entitySocialSecurity\":{{entitySocialSecurity}},\n\"administratorSocialSecurity\":{{administratorSocialSecurity}},\n\"directSpins\":{{directSpins}},\n\"changeTransactionState\":{{changeTransactionState}},\n\"entitySusceptibleReversal\":{{entitySusceptibleReversal}},\n\"entityListBank\":{{entityListBank}},\n\"serviceCodeTr\":{{serviceCodeTr}},\n\"serviceName\":{{serviceName}},\n\"serviceDescription\":{{serviceDescription}},\n\"serviceAprobation\":{{serviceAprobation}},\n\"serviceState\":{{serviceState}},\n\"serviceSucursal\":{{serviceSucursal}},\n\"serviceNIT\":{{serviceNIT}},\n\"serviceNameAssociate\":{{serviceNameAssociate}},\n\"serviceCategoryCIIU\":{{serviceCategoryCIIU}},\n\"serviceMulticredit\":{{serviceMulticredit}},\n\"serviceCodeMulticredit\":{{serviceCodeMulticredit}},\n\"serviceNameMulticredit\":{{serviceNameMulticredit}},\n\"serviceDescriptionMulticredit\":{{serviceDescriptionMulticredit}},\n\"serviceAprobationMulticredit\":{{serviceAprobationMulticredit}},\n\"serviceStateMulticredit\":{{serviceStateMulticredit}},\n\"serviceTypeIntegration\":{{serviceTypeIntegration}},\n\"serviceAssociateGateway\":{{serviceAssociateGateway}},\n\"serviceLimitCategoryNatural\":{{serviceLimitCategoryNatural}},\n\"serviceLimitCategoryJuridic\":{{serviceLimitCategoryJuridic}},\n\"serviceTypePayment\":{{serviceTypePayment}},\n\"serviceTypeCollection\":{{serviceTypeCollection}},\n\"accountNumber\":{{accountNumber}},\n\"accountType\":{{accountType}},\n\"accountFinancialInstitution\":{{accountFinancialInstitution}},\n\"accountNIT\":{{accountNIT}},\n\"accountAprobation\":{{accountAprobation}},\n\"accountState\":{{accountState}},\n\"typeCompensation\":{{typeCompensation}},\n\"codeRouteTransit\":{{codeRouteTransit}},\n\"codeCompensation\":{{codeCompensation}},\n\"percentageUseLimits\":{{percentageUseLimits}},\n\"financialInstitutionEnabled\":{{financialInstitutionEnabled}},\n\"financialInstitutionCollecting\":{{financialInstitutionCollecting}},\n\"financialInstitutionWSFraudPrevention\":{{financialInstitutionWSFraudPrevention}},\n\"financialInstitutionHold\":{{financialInstitutionHold}},\n\"financialInstitutionWSCredit\":{{financialInstitutionWSCredit}},\n\"financialInstitutionWSNF\":{{financialInstitutionWSNF}},\n\"financialInstitutionReport\":{{financialInstitutionReport}},\n\"financialInstitutionMonthlyReport\":{{financialInstitutionMonthlyReport}},\n\"credits\": [\n{\n\"serviceCode\":{{serviceCode}},\n\"companyIdentification\":{{companyIdentification}},\n\"transactionValue\":{{transactionValue}},\n\"vatValue\":{{vatValue}},\n\"extraData\":{{extraData}},\n},\n{\n\"serviceCode\":{{serviceCode}},\n\"companyIdentification\":{{companyIdentification}},\n\"transactionValue\":{{transactionValue}},\n\"vatValue\":{{vatValue}},\n\"extraData\":{{extraData}}\n}\n]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/validated-rules-mgmt/validate-rules",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"validated-rules-mgmt",
+						"validate-rules"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
