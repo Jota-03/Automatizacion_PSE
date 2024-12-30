@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "5fe80dc5-17b1-415a-8740-43a1f8af8361",
+		"name": "7-CycleCalendarUpdate_400",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34404218"
+	},
+	"item": [
+		{
+			"name": "CycleCalendarUpdate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_cycle}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"typeCycle\": {{typeCycle}},\n    \"numberCycle\": {{numberCycle}},\n    \"startDate\": {{startDate}},\n    \"endDate\": {{endDate}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/config-cycle-mgmt/update-cycle/{{id_cycle}}",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"config-cycle-mgmt",
+						"update-cycle",
+						"{{id_cycle}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

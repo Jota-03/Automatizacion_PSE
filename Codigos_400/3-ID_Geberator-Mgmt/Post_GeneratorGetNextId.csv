@@ -1,5 +1,5 @@
-﻿productId;nit;comentario
-;{{nit}};productId - enviar campo vacio
-null;{{nit}};productId - enviar campo nulo
-{{id}};;nit - enviar campo vacio
-{{id}};null;nit - enviar campo nulo
+﻿productId,nit,comentario
+"""""",{{nit}},productId - enviar campo vacio
+null,{{nit}},productId - enviar campo nulo
+{{id}},"""""",nit - enviar campo vacio
+{{id}},null,nit - enviar campo nulo

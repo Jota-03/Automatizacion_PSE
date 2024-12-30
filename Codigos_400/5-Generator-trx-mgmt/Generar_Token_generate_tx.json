@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "f4050c85-340e-4336-beff-847464eb08d6",
+		"name": "Generar Token generate tx",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34404218"
+	},
+	"item": [
+		{
+			"name": "token generate tx",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Captura la respuesta en formato JSON\r",
+							"var jsonData = pm.response.json();\r",
+							" \r",
+							"// Guarda el access_token en una variable global\r",
+							"pm.globals.set(\"access_token_generateTX\", jsonData.access_token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "AAIgNmQ1ZDJkYWE4NTgxZTlhMjRkNjdkM2I5NjMzZTE3YTSxvhV8hls6uQBfNmixaxdS2FocWMWFFTowIaF7L_TEd4YhNYf52MfVNu5Mp-4npaJg56LsOazzsKH4z-QwpSK1igsGBhy5EmckmQjS9r0Ux18hQ1YCeGMV7U1ECPr_erP_S7yOo28AvUm6phl112kz",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic MzNhNzVlZWRiMmM0NDEyNjUxYWQ1ZDFiMTI3OWViMjk6TEpZcVd0eWZPRUdiaUkzRVR1dlVuZHpBb3NHMVVraTU="
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "7421f336a9c01538bee4725d13fefb47",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "generate-id.create",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "scope",
+							"value": "validate-rules",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "scope",
+							"value": "product-managment",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "scope",
+							"value": "transaction-query",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "scope",
+							"value": "generate-id.update",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "scope",
+							"value": "generate-tx-create",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "config-cycle-consult",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "scope",
+							"value": "transaction-query-ById",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{urlAPI}}/ptx-token/oauth2/token",
+					"host": [
+						"{{urlAPI}}"
+					],
+					"path": [
+						"ptx-token",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

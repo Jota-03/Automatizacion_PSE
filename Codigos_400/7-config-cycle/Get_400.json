@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "866a93a1-166f-4134-9ae2-fa79369258d1",
+		"name": "7-Get_400",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34404218"
+	},
+	"item": [
+		{
+			"name": "cycleCalendarFindAll",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_cycle}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/config-cycle-mgmt/cycle-calendar?pageSize=3&pageNumber=1&endDate=2024-08-02&startDate=2024-08-08",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"config-cycle-mgmt",
+						"cycle-calendar"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "3"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "endDate",
+							"value": "2024-08-02"
+						},
+						{
+							"key": "startDate",
+							"value": "2024-08-08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exceptionCalendarFindAll",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_cycle}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/config-cycle-mgmt/exception-calendar?pageSize=10&pageNumber=1",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"config-cycle-mgmt",
+						"exception-calendar"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCycleLogById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_cycle}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/config-cycle-mgmt/search-cycle-log-by/1?creationDatetime=2024-06-28&pageSize=10&pageNumber=1",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"config-cycle-mgmt",
+						"search-cycle-log-by",
+						"1"
+					],
+					"query": [
+						{
+							"key": "creationDatetime",
+							"value": "2024-06-28"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

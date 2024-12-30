@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "e08f6317-b4fc-40d7-b6b7-f9efd2c9d868",
+		"name": "7-exceptionCalendarCreate_400",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34404218"
+	},
+	"item": [
+		{
+			"name": "exceptionCalendarCreate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Obtener la fecha actual\r",
+							"var today = new Date();\r",
+							"\r",
+							"// Generar la fecha de inicio (startDate) sumando un día a la fecha actual\r",
+							"var startDate = new Date();\r",
+							"startDate.setDate(today.getDate() + 1);  // Sumar 1 día a la fecha actual\r",
+							"\r",
+							"// Generar la fecha de finalización (endDate) sumando un día adicional a la startDate\r",
+							"var endDate = new Date(startDate); // Copiar la fecha de startDate\r",
+							"endDate.setDate(startDate.getDate() + 1); // Sumar 1 día a la startDate para obtener la endDate\r",
+							"\r",
+							"// Crear un identificador único basado en el tiempo actual para evitar repeticiones\r",
+							"var uniqueIdentifier = new Date().getTime();  // Utilizamos el timestamp como identificador único\r",
+							"\r",
+							"// Modificar las fechas sumando este identificador único (en milisegundos)\r",
+							"startDate.setTime(startDate.getTime() + uniqueIdentifier);\r",
+							"endDate.setTime(endDate.getTime() + uniqueIdentifier);\r",
+							"\r",
+							"// Formatear ambas fechas al formato \"YYYY-MM-DDTHH:mm:ss\"\r",
+							"var formattedStartDate = startDate.toISOString().split('T')[0] + \"T00:00:00\";\r",
+							"var formattedEndDate = endDate.toISOString().split('T')[0] + \"T00:00:00\";\r",
+							"\r",
+							"// Guardar las fechas en variables de entorno\r",
+							"pm.environment.set(\"startDate\", formattedStartDate);\r",
+							"pm.environment.set(\"endDate\", formattedEndDate);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_cycle}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startDate\": {{startDate}},\n    \"endDate\": {{endDate}},\n    \"typeException\": {{typeException}},\n    \"description\":{{description}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/config-cycle-mgmt/create-exception",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"config-cycle-mgmt",
+						"create-exception"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

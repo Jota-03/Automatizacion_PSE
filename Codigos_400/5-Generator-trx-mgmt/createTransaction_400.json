@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "32d0cf95-44e9-435e-926e-6bb50d6160bb",
+		"name": "5-createTransaction_400",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34404218"
+	},
+	"item": [
+		{
+			"name": "createTransaction",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');  // Requiere la librería moment\r",
+							"var currentDate = moment().format('YYYY-MM-DDTHH:mm:ss');  // Obtiene la fecha actual en el formato necesario\r",
+							"pm.environment.set(\"currentDate\", currentDate);  // Establece la variable de entorno\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//validar respuesta correcta\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token_generateTX}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "message-uuid",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "request-app-id",
+						"value": "{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "0dc4b6bef82dc41e94f82130dfb26caf",
+						"type": "text"
+					},
+					{
+						"key": "Client-Secret",
+						"value": "7421f336a9c01538bee4725d13fefb47",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"initiation\": {\n    \"productId\": {{productId}},\n    \"initiationType\": {{initiationType}},\n    \"instructionIdentification\": {{instructionIdentification}},//llama cus de generatorgetnextid\n    \"endtoendIdentification\": {{endtoendIdentification}},\n    \"creationDatetime\": {{creationDatetime}},\n    \"status\": {{status}},\n    \"authorizationCode\": {{authorizationCode}},\n    \"validationPayeer\": {{validationPayeer}},\n    \"geolocalization\": {{geolocalization}},\n    \"channel\": {{channel}},\n    \"mandateId\": {{mandateId}},\n    \"cicle\": {{cicle}}\n  },\n  \"instructedAmount\": {\n    \"amount\": {{amount}},\n    \"currency\": {{currency}},\n    \"chargesAmount\": {{chargesAmount}},\n    \"gmftaxIndicator\": {{gmftaxIndicator}}\n  },\n  \"remittanceInformation\": {\n    \"identificationType\": {{identificationType}},\n    \"identificationNumber\": {{identificationNumber}},\n    \"merchantCustomerName\": {{merchantCustomerName}},\n    \"merchantCustomerCategoryCode\": {{merchantCustomerCategoryCode}},\n    \"serviceCode\": {{serviceCode}},\n    \"reference2\": {{reference2}},\n    \"reference3\": {{reference3}},\n    \"unstructured\": {{unstructured}},\n    \"reference1\": {{reference1}},\n    \"method\": {{method}}\n  },\n  \"beneficiaryAgent\": {\n    \"financial_institution\": {{financial_institution}},\n    \"account\": {{account}},\n    \"accountType\": {{accountType}}\n  },\n  \"debtorAgent\": {\n    \"financialInstitution\": {{financialInstitution}},\n    \"account\": {{account}},\n    \"accountType\": {{accountType}}\n  },\n  \"initiatingParty\": {\n    \"identificationType\": {{identificationType}},\n    \"identificationNumber\": {{identificationNumber}},\n    \"name\": {{name}},\n    \"ciiu\": {{ciiu}},\n    \"serviceCode\": {{serviceCode}},\n    \"instructionIdentification\": {{instructionIdentification}}\n  },\n  \"debtor\": {\n    \"userType\": {{userType}},\n    \"identificationType\": {{identificationType}},\n    \"identificationNumber\": {{identificationNumber}},\n    \"name\": {{name}},\n    \"phoneNumber\": {{phoneNumber}},\n    \"email\": {{email}},\n    \"address\": {{address}}\n  },\n  \"thirdParty\": {\n    \"userType\": {{userType}},\n    \"identificationType\": {{identificationType}},\n    \"identificationNumber\": {{identificationNumber}},\n    \"name\": {{name}},\n    \"phoneNumber\": {{phoneNumber}},\n    \"email\": {{email}}\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{dominioCapa}}/v1/ptx/generator-trx-mgmt/transactions",
+					"host": [
+						"{{dominioCapa}}"
+					],
+					"path": [
+						"v1",
+						"ptx",
+						"generator-trx-mgmt",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
